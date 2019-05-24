@@ -138,3 +138,13 @@ const data = [
   'car',
   'truck',
 ];
+
+const transportation = data.reduce(function(obj, item) {
+  if (!obj[item]) {
+    obj[item] = 0; // If no item exists it is set to 0
+  }
+  obj[item]++; // This will increment the obj item
+  return obj;
+}, []);
+
+console.log(transportation);
