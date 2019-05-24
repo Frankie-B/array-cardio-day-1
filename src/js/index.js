@@ -76,7 +76,7 @@ console.table(fifteen);
 const fullNames = inventors.map(
   inventor => inventor.first + '' + inventor.last
 );
-console.log(fullNames); // make a commit for the .map question solution
+console.log(fullNames); 
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
@@ -93,6 +93,13 @@ const totalYears = inventors.reduce((total, inventor) => {
 console.log(totalYears);
 
 // 5. Sort the inventors by years lived
+const oldest = inventors.sort(function(a,b) {
+  const lastGuy = a.passed - a.year;
+  const nextGuy = b.passed - b.year;
+  return lastGuy > nextGuy ? -1 : 1;
+});
+
+console.table(oldest);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
