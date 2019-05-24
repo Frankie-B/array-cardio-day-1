@@ -80,6 +80,9 @@ console.log(fullNames); // make a commit for the .map question solution
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
+const ordered = inventors.sort((a, b) => (a.year > b.year ? 1 : -1)); // Ternary operator (shorthand iof statement)
+
+console.table(ordered);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
